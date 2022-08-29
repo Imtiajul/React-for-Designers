@@ -1,0 +1,40 @@
+{
+  "cells": [
+    {
+      "title": "Intro to React",
+      "image": "./images/logo-react.png"
+    },
+    {
+      "title": "Components and Elements",
+      "image": "./images/logo-react.png"
+    },
+    {
+      "title": "State and Lifecycle",
+      "image": "./images/logo-react.png"
+    },
+    {
+      "title": "Handling Events",
+      "image": "./images/logo-react.png"
+    },
+    {
+      "title": "Conditional Rendering",
+      "image": "./images/logo-react.png"
+    },
+    {
+      "title": "Forms",
+      "image": "./images/logo-react.png"
+    },
+    {
+      "title": "Lifting State Up",
+      "image": "./images/logo-react.png"
+    },
+    {
+      "title": "Composition vs Inheritance",
+      "image": "./images/logo-react.png"
+    },
+    {
+      "title": "Thinking In React",
+      "image": "./images/logo-react.png"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+.Hero {
+  height: 920px;
+  background-image: url(../images/wallpaper3.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 150px 50px;
+  position: relative;
+}
+.Hero svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateY(50%);
+}
+.HeroGroup {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+.Hero h1 {
+  margin: 0;
+  color: white;
+  font-size: 60px;
+  line-height: 1.2;
+
+  /* animation: HeroAnimation 3s cubic-bezier(0.2, 0.8, 0.2, 1) .1s 1 normal forwards; */
+  animation: HeroAnimation 3s 0.1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  opacity: 0;
+}
+.Hero p {
+  font-size: 30px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+
+  animation: HeroAnimation;
+  animation-duration: 3s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.Hero a {
+  font-size: 17px;
+  font-weight: 600;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 9px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.Hero a:hover {
+  color: white;
+  background-color: black;
+}
+
+.Hero .Logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  margin: 10rem 0;
+  justify-items: center;
+  align-items: center;
+}
+/* 
+@media (max-width: 640px) {
+  .Hero .Logos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+} */
+
+@keyframes HeroAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .HeroGroup {
+    padding: 10rem 2rem;
+  }
+  .Hero h1 {
+    font-size: 4rem;
+  }
+  .Hero p {
+    font-size: 2.4rem;
+  }
+}
