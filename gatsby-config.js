@@ -7,7 +7,7 @@ module.exports = {
     siteUrl: `https://iimtiajul.ml/`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,  {
+    `gatsby-plugin-react-helmet`, {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `3jn36rtjnc83`,
@@ -35,7 +35,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
   ],
