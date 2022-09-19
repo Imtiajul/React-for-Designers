@@ -4,7 +4,6 @@
  *
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
-
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
@@ -33,6 +32,24 @@ const Layout = ({ children }) => {
           }
         }
       }
+      allContentfulFooterDownloadLink(sort: {fields: [createdAt] order: ASC}) {
+        edges {
+          node {
+            title
+            url
+            createdAt
+          }
+        }
+      }
+      allContentfulFooterCommunityLink(sort: {fields: [createdAt] order: ASC})  {
+        edges {
+          node {
+            title
+            url
+            createdAt
+          }
+        }
+      }
     }
   `)
 
@@ -49,7 +66,9 @@ const Layout = ({ children }) => {
       <div>
         <main>{children}
         </main>
-        <footer
+        <footer style={{
+          background: `#F1F3F5`,
+        }}
         // style={{
         //   margin: `0 auto`,
         // maxWidth: `var(--size-content)`,

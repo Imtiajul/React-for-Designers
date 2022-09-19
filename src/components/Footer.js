@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components"
 
 const FooterGroup = styled.div`
-   background: #F1F3F5;
    padding: 5rem 0;
    margin: 0 auto;
    display: grid;
@@ -36,12 +35,19 @@ const Button = styled.button`
    }
 `
 const LinkGroup = styled.div`
-   width: 50rem;
+   width: 100%;
    margin: 5rem auto;
    display: grid;
-   grid-template-columns: repeat(2, 1fr);
+   grid-template-columns: repeat(3, 1fr);
    grid-gap: 1rem;
    transition: 0.8s;
+   justify-items: center;
+   
+   @media (max-width:576px){
+      grid-template-columns: auto;
+      text-align: center;
+      grid-row-gap: 2rem;
+   }
 
    a:hover {
       color: black;
@@ -54,16 +60,43 @@ const Copyright = styled.div`
    color: #486791;
    text-align: center;
    `
-
+const LinkGroupItems = styled.div`
+   display: grid;
+   grid-row-gap: .8rem;
+   
+   h5 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: rgba(148, 164, 186, 1);
+      margin: 0;
+      margin-bottom: .5rem;
+   }
+`
 
 const Footer = ({ data, children }) => (
-   <FooterGroup>
+   <FooterGroup className="container">
       <Text>Tweet “Prototype and build apps with React and Swift. New courses by @IMI”</Text>
       <Button>Tweet</Button>
-      <LinkGroup> 
-         {data.allContentfulLink.edges.map(edge => (
-            <a href="{edge.node.url}">{edge.node.title}</a>
+      <LinkGroup>
+         <LinkGroupItems>
+            <h5>Main</h5>
+            {data.allContentfulLink.edges.map(edge => (
+            <a href={edge.node.url}>{edge.node.title}</a>
          ))}
+         </LinkGroupItems>
+         <LinkGroupItems>
+               <h5>Downloads</h5>
+            {data.allContentfulFooterDownloadLink.edges.map(edge => (
+            <a href={edge.node.url}>{edge.node.title}</a>
+         ))}
+         </LinkGroupItems>
+         <LinkGroupItems>
+               <h5>Community</h5>
+            {data.allContentfulFooterCommunityLink.edges.map(edge => (
+            <a href={edge.node.url}>{edge.node.title}</a>
+         ))}
+         </LinkGroupItems>
+
       </LinkGroup>
       <Copyright>{children}</Copyright>
 

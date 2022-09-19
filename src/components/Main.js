@@ -9,7 +9,7 @@ import Wave from "./Wave"
 import StaticData from "../../staticdata.json"
 import Cell from "./Cell"
 
-const SectionCellGroup = styled.div `
+const SectionCellGroup = styled.div`
    max-width: 800px;
    margin: 0 auto 10rem;
    display: grid;
@@ -23,7 +23,7 @@ const SectionCellGroup = styled.div `
    }
 
 `
-const SectionCellTitle = styled.h3 `
+const SectionCellTitle = styled.h3`
    font-size: 2.8rem;
    text-transform: uppercase;
    text-align: center;
@@ -49,56 +49,95 @@ const App = () => (
                <img src={require('../images/logo-swift.png').default} alt="swift" width="50" />
             </div>
             {/* wave svg component */}
-            <Wave/>
+            <Wave />
          </div>
       </div>
-      
+
       {/* card component */}
-      <div className="Cards">
-         <h2>11 Courses, more coming</h2>
+      <div className="Cards py-5">
+         <h2 className='heading-md'>11 Courses, more coming..</h2>
          <div className="CardGroup">
             <Card
-               title="Design System"
+               title="Design System with Figma"
                text="10 sections"
                image={require('../images/wallpaper.jpg').default}
             />
             <Card
                title="React for Designers"
                text="12 sections"
-               image={require('../images/wallpaper2.jpg').default}
+               image={require('../images/wp_react-for_designers.jpg').default}
             />
             <Card
-               title="Sound System"
+               title="Video Editing with Screenflow"
                text="5 sections"
-               image={require('../images/wallpaper3.jpg').default}
+               image={require('../images/wp_video_editing.jpg').default}
             />
             <Card
-               title="ARKit"
-               text="10 sections"
-               image={require('../images/wallpaper4.jpg').default}
+               title="Sound Design with Cubase"
+               text="6 sections"
+               image={require('../images/wp_sound_design-cubase.jpg').default}
             />
+            {/* <Card
+               title="Build on ARKit App"
+               text="10 sections"
+               image={require('../images/wp_arkit-2.jpg').default}
+            /> */}
+            <Card
+               title="Motion Design in After Effects"
+               text="8 Sections"
+               image={require('../images/wp_motion_design-after-effects.jpg').default}
+            />
+            {/* <Card
+               title="Create a Sketch Plugin"
+               text="7 Sections"
+               image={require('../images/wp_sketch-plugin.jpg').default}
+            /> */}
+            <Card
+               title="Create a Spritekit game"
+               text="9 Sections"
+               image={require('../images/wp_spritekit.jpg').default}
+            />
+            <Card
+               title="Learn Swift"
+               text="10 Sections"
+               image={require('../images/wp_swift.jpg').default}
+            />
+            {/* <Card
+               ttle="Swift Advanced"
+               text="22 Sections"
+               image={require('../images/wp_swift_advanced.jpg').default}
+            /> */}
+            <Card
+               title="Learn Sketch"
+               text="21 Sections"
+               image={require('../images/wp_sketch.jpg').default}
+            />
+            {/* <Card
+               title="Learn iOS Design"
+               text="12 Sections"
+               image={require('../images/wp_ios_design.jpg').default}
+            /> */}
          </div>
       </div>
       {/* Section component */}
-      <Section image={require('../images/wallpaper2.jpg').default}
-      logo={require('../images/logo-react.png').default}
-      title="React for Desingers"
-      text="lorem ipsum dolor siteset, consectetur adipiscing elit, sed diam nonexistent, sed diam nonumy eirmod tempor incididunt ut labore et dolore magna aliquyam erat, sed diam nonumy eirmod"      />
+      <Section className="container" image={require('../images/wallpaper2.jpg').default}
+         logo={require('../images/logo-react.png').default}
+         title="React for Desingers"
+         text="lorem ipsum dolor siteset, consectetur adipiscing elit, sed diam nonexistent, sed diam nonumy eirmod tempor incididunt ut labore et dolore magna aliquyam erat, sed diam nonumy eirmod" />
 
 
-      {/* SectionCellGroup component*/}
-
-         <section className="my-3">
-            <SectionCellTitle>9 Sections - 5 Hours</SectionCellTitle>
-            <SectionCellGroup>
-               {StaticData.cells.map(cell => (
-                  <Cell
-                     title={cell.title}
-                     image={cell.image}
-                     />
-               ))}
-            </SectionCellGroup>
-         </section>
+      <section className="my-3 container">
+         <SectionCellTitle>9 Sections - 5 Hours</SectionCellTitle>
+         <SectionCellGroup>
+            {StaticData.cells.map(cell => (
+               <Cell
+                  title={cell.title}
+                  image={cell.image}
+                  logo_bg={cell.logo_bg}
+               />
+            ))}
+         </SectionCellGroup>
+      </section>
 
    </div>
 )

@@ -2,39 +2,49 @@
   "cells": [
     {
       "title": "Intro to React",
-      "image": "./images/logo-react.png"
+      "image": "../static/logo-react-sm.png",
+      "logo_bg": "linear-gradient(135deg, #3672F8 0%, #9B51E0 100%)"
+
     },
     {
       "title": "Components and Elements",
-      "image": "./images/logo-react.png"
+      "image": "../static/logo-react-sm.png",
+      "logo_bg": "linear-gradient(135deg, #A6193B 0%, #9B51E0 100%);"
     },
     {
       "title": "State and Lifecycle",
-      "image": "./images/logo-react.png"
+      "image": "../static/logo-react-sm.png",
+      "logo_bg": "linear-gradient(135deg, #9B51E0 0%, #9B51E0 100%);"
     },
     {
       "title": "Handling Events",
-      "image": "./images/logo-react.png"
+      "image": "../static/logo-react-sm.png",
+      "logo_bg": "linear-gradient(135deg, #3B4661 0%, #6D389F 100%)"
     },
     {
       "title": "Conditional Rendering",
-      "image": "./images/logo-react.png"
+      "image": "../static/logo-react-sm.png",
+      "logo_bg": "linear-gradient(135deg, #3672F8 0%, #9B51E0 100%);"
     },
     {
       "title": "Forms",
-      "image": "./images/logo-react.png"
+      "image": "../static/logo-react-sm.png",
+      "logo_bg": "linear-gradient(135deg, #3B4661 0%, #6D389F 100%);"
     },
     {
       "title": "Lifting State Up",
-      "image": "./images/logo-react.png"
+      "image": "../static/logo-react-sm.png",
+      "logo_bg": "linear-gradient(135deg, #1DB3B3 0%, #9B51E0 100%); "
     },
     {
       "title": "Composition vs Inheritance",
-      "image": "./images/logo-react.png"
+      "image": "../static/logo-react-sm.png",
+      "logo_bg": "linear-gradient(135deg, #9C6A6A 0%, #9B51E0 100%);"
     },
     {
       "title": "Thinking In React",
-      "image": "./images/logo-react.png"
+      "image": "../static/logo-react-sm.png",
+      "logo_bg": "linear-gradient(135deg, #223868 0%, #9B51E0 100%);"
     }
   ]
 }

@@ -11,6 +11,7 @@ const CellImage = styled.div `
    width: 60px;
    height: 60px;
    background: black;
+   ${'' /* background-image: url(${props => props.image}), ${props =>  props.logo_bg}; */}
    background-image: url(${props => props.image});
    background-size: 48px;
    background-position: center center;
@@ -23,12 +24,12 @@ const CellTitle = styled.h4 `
    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
    padding: 0 1rem 1rem 0;
    line-height: 1.4;
-
 `
 
 const Cell = props => (
    <CellGroup>
-      <CellImage image={props.image}/>
+      <CellImage image={props.image} logo_bg={props.logo_bg}/>
+
       <CellTitle>{props.title}</CellTitle>
    </CellGroup>   
 )
