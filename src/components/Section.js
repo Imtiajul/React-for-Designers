@@ -11,6 +11,10 @@ const SectionGroup = styled.div`
    display: grid;
    grid-template-rows: 300px auto;
    position: relative;
+   
+@media (max-width: 768px) {
+   height: 61.5rem;
+}
 `
 const SectionLogo = styled.img`
    align-self: end;
@@ -24,17 +28,23 @@ const SectionTitleGroup = styled.div`
    grid-template-rows: auto 100%;
    align-items: center;
 
-@media (max-width: 720px) {
+
+@media (max-width: 768px) {
    grid-template-columns: 1fr;
+   align-items: baseline;
+   margin-top: 3rem;
+   text-align: center;
 }
-
 `
-
 const SectionTitle = styled.h2`
    color: white;
    font-size: 60px;
    margin: 0;
    margin-bottom: 20px;
+
+   @media (max-width: 768px) {
+      font-size: 3.3rem;
+   }
 `
 const SectionText = styled.p`
    color: white;  
@@ -42,23 +52,33 @@ const SectionText = styled.p`
 `
 const WaveTop = styled.div`
    position: absolute;
-   top: -50px;
+   top: -8%;
    width: 100%;   
    transform: rotate(180deg);
+   @media (max-width: 900px) {
+      top: -11%
+   }
+   @media (max-width: 567px) {
+      top: -13%
+   }
 `
 const WaveBottom = styled.div`
    position: absolute;
-   bottom: -50px;
+   bottom: -8%;
    width: 100%;
+   @media (max-width: 900px) {
+      bottom: -11%
+   }
+   @media (max-width: 567px) {
+      bottom: -13%
+   }
 `
 const Section = props => (
    <SectionGroup image={props.image}>
-
       <WaveTop><Wave /></WaveTop>
       <WaveBottom><Wave /></WaveBottom>
-
       <SectionLogo src={props.logo} />
-      <SectionTitleGroup>
+      <SectionTitleGroup className='container'>
          <SectionTitle>{props.title}</SectionTitle>
          <SectionText>{props.text}</SectionText>
       </SectionTitleGroup>

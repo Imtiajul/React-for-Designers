@@ -36,7 +36,7 @@ class Header extends React.Component {
           description, 
           amount
         }
-      fetch('https://localhost:9000/stripe-charge', {
+      fetch('https://localhost:9000/functions/stripe-charge', {
         method: 'POST',
         body: JSON.stringify(objBody)
       })
@@ -51,7 +51,7 @@ class Header extends React.Component {
           <Link to="/downloads">Downloads</Link>
           <Link to="/workshops">Workshops</Link>
           <StripeCheckout
-            amount={5000}
+            amount={530.300}
             image={'https://i.ibb.co/t2sG80H/logo-figma.png'}
             token={this.handlePurchase}
             stripeKey = {'pk_test_51LbRzCHIdzWvbWi0CvjXQb23td0f6m2sicbBZmI6kiIgGw00w4woiHWWtZofLDZjnN3MR2dvgNZc2BdhIHyrsEWm00j743c3ah'}

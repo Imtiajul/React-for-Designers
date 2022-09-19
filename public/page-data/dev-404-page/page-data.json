@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"componentChunkName":"component---cache-dev-404-page-js","path":"/dev-404-page/","result":{"data":{"allSiteFunction":{"nodes":[]},"allSitePage":{"nodes":[{"path":"/using-dsg"},{"path":"/404/"},{"path":"/404.html"},{"path":"/"},{"path":"/page-2/"},{"path":"/using-ssr/"},{"path":"/using-typescript/"}]}},"pageContext":{}},"staticQueryHashes":["2822115387","63159454"]}
+=======
+{"componentChunkName":"component---cache-dev-404-page-js","path":"/dev-404-page/","result":{"data":{"allSiteFunction":{"nodes":[]},"allSitePage":{"nodes":[{"path":"/using-dsg"},{"path":"/404/"},{"path":"/404.html"},{"path":"/"},{"path":"/page-2/"},{"path":"/using-ssr/"},{"path":"/using-typescript/"}]}},"pageContext":{}},"staticQueryHashes":["535971021","63159454"]}
+>>>>>>> Updated-course-and-other-sections

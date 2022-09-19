@@ -4,7 +4,7 @@
 
 .Card {
    width: 30rem;
-   height: 20.25rem;
+   height: 23.25rem;
    padding: 2rem;
    overflow: hidden;
    position: relative;
@@ -35,6 +35,12 @@
    /* margin: 2rem 0 0 2rem; */
    margin-top: 0;
    width: 19rem;
+}
+
+@media (max-width: 768px) {
+   .Card h3 {
+   font-size: 2.8rem;
+   }
 }
 .Card p {
    color: rgba(255, 255, 255, 0.8);

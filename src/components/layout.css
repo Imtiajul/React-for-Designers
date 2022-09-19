@@ -44,7 +44,9 @@ body {
   margin: 0;
   word-wrap: break-word;
 }
-a, p, div {
+a,
+p,
+div {
   font-size: 1.6rem;
 }
 a {
@@ -226,7 +228,42 @@ pre tt:before,
 pre tt:after {
   content: none;
 }
-
+@media (max-width:768px)  {
+  .heading-md {
+    font-size: 3.5rem !important;
+  }
+}
 .my-3 {
   margin: 3rem 0;
+}
+.py-5 {
+  padding: 5rem 0;
+}
+.container {
+  width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
 }
