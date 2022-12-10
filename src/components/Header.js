@@ -18,30 +18,29 @@ class Header extends React.Component {
   }
 
   handleScroll = (event) => {
-    // const scrollTop = window.pageYOffset;
-    // if (scrollTop > 50) {
-    //   this.setState({ hasScrolled: true });
-    // } else {
-    //   this.setState({ hasScrolled: false });
-    // }
-    
-  }
-    handlePurchase = (token) => {
-        const amount = 5000
-        const description = "My awesome product"
-        
-        const objBody = {
-          tokenId: token.id,
-          email: token.email,
-          name: token.name,
-          description, 
-          amount
-        }
-      fetch('https://localhost:9000/functions/stripe-charge', {
-        method: 'POST',
-        body: JSON.stringify(objBody)
-      })
+    const scrollTop = window.pageYOffset;
+    if (scrollTop > 50) {
+      this.setState({ hasScrolled: true });
+    } else {
+      this.setState({ hasScrolled: false });
     }
+  }
+  handlePurchase = (token) => {
+    const amount = 5000
+    const description = "My awesome product"
+
+    const objBody = {
+      tokenId: token.id,
+      email: token.email,
+      name: token.name,
+      description,
+      amount
+    }
+    fetch('https://localhost:9000/functions/stripe-charge', {
+      method: 'POST',
+      body: JSON.stringify(objBody)
+    })
+  }
 
   render() {
     return (
@@ -55,8 +54,8 @@ class Header extends React.Component {
             amount={530.300}
             image={'https://i.ibb.co/t2sG80H/logo-figma.png'}
             token={this.handlePurchase}
-            stripeKey = {'pk_test_51LbRzCHIdzWvbWi0CvjXQb23td0f6m2sicbBZmI6kiIgGw00w4woiHWWtZofLDZjnN3MR2dvgNZc2BdhIHyrsEWm00j743c3ah'}
-            >
+            stripeKey={'pk_test_51LbRzCHIdzWvbWi0CvjXQb23td0f6m2sicbBZmI6kiIgGw00w4woiHWWtZofLDZjnN3MR2dvgNZc2BdhIHyrsEWm00j743c3ah'}
+          >
 
             <button>Buy</button>
           </StripeCheckout>
