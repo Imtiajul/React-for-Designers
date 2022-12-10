@@ -2,16 +2,18 @@ import * as React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
+import "./index.css"
 import "./Main.css"
 import Card from "./Card"
 import Section from "./Section"
 import Wave from "./Wave"
 import StaticData from "../../staticdata.json"
 import Cell from "./Cell"
+import ContentHour from './ContentHour'
 
 const SectionCellGroup = styled.div`
    max-width: 800px;
-   margin: 0 auto 10rem;
+   margin: 0 auto;
    display: grid;
    grid-template-columns: repeat(2, 1fr); 
    grid-gap: 2.5rem;
@@ -54,7 +56,7 @@ const App = () => (
       </div>
 
       {/* card component */}
-      <div className="Cards py-5">
+      <section className="Cards py-5">
          <h2 className='heading-md'>11 Courses, more coming..</h2>
          <div className="CardGroup">
             <Card
@@ -118,15 +120,16 @@ const App = () => (
                image={require('../images/wp_ios_design.jpg').default}
             /> */}
          </div>
-      </div>
+      </section>
       {/* Section component */}
       <Section className="container" image={require('../images/wallpaper2.jpg').default}
          logo={require('../images/logo-react.png').default}
          title="React for Desingers"
          text="lorem ipsum dolor siteset, consectetur adipiscing elit, sed diam nonexistent, sed diam nonumy eirmod tempor incididunt ut labore et dolore magna aliquyam erat, sed diam nonumy eirmod" />
 
+      <ContentHour hour={60} hourText={'hours of video content that\'s downloadable and captioned'} lang={4} langText={'languages supported. English, Chinese, French, Spanish'}/>
 
-      <section className="my-3 container">
+      <section className="py-5 container">
          <SectionCellTitle>9 Sections - 5 Hours</SectionCellTitle>
          <SectionCellGroup>
             {StaticData.cells.map(cell => (

@@ -52,7 +52,6 @@ const LinkGroup = styled.div`
    a:hover {
       color: black;
    }
-
 `
 const Copyright = styled.div`
    margin: 0 auto;

@@ -18,12 +18,13 @@ class Header extends React.Component {
   }
 
   handleScroll = (event) => {
-    const scrollTop = window.pageYOffset;
-    if (scrollTop > 50) {
-      this.setState({ hasScrolled: true });
-    } else {
-      this.setState({ hasScrolled: false });
-    }
+    // const scrollTop = window.pageYOffset;
+    // if (scrollTop > 50) {
+    //   this.setState({ hasScrolled: true });
+    // } else {
+    //   this.setState({ hasScrolled: false });
+    // }
+    
   }
     handlePurchase = (token) => {
         const amount = 5000

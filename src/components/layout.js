@@ -63,7 +63,7 @@ const Layout = ({ children }) => {
         ]}
       />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div>
+      <>
         <main>{children}
         </main>
         <footer style={{
@@ -84,7 +84,7 @@ const Layout = ({ children }) => {
             Backgrounds made in Cinema 4D, iOS app in Swift, site in React. <br /> <a href="mailto:iimtiajul@gmail.com">Email us</a> to ask anything. © 2018 - Terms of Service - Privacy Policy
           </Footer>
         </footer>
-      </div>
+      </>
     </>
   )
 }
